@@ -175,6 +175,7 @@ def start_sentry():
 
 def stop_sentry():
     ticcmd('--exit-safe-start', '--position', str(0))
+    pi.write(23,0)
     print("Stoping sentry laser.")
 
 def check_status():

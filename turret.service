@@ -1,0 +1,15 @@
+[Unit]
+Description=Turret daemon
+After=syslog.target network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/
+ExecStart=/usr/bin/python3 /home/pi/turret.py
+Type=simple
+Restart=always
+KillMode=process
+TimeoutSec=900
+
+[Install]
+WantedBy=multi-user.target
